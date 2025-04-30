@@ -9,10 +9,10 @@ class Sun:
     def get_mass(self) -> float:
         return self.mass
 
-    def get_xpos(self) -> float:
+    def get_x(self) -> float:
         return self.x
 
-    def get_ypos(self) -> float:
+    def get_y(self) -> float:
         return self.y
 
     def __str__(self):
