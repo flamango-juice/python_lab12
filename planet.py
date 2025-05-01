@@ -53,7 +53,7 @@ class Planet:
         self.t.goto(self.x,self.y)
 
     def __str__(self):
-        return f"Planet {self.name}, ({self.x}, {self.y})"
+        return f"Planet {self.name}, ({self.distance}, {self.vel_y})"
 
     def __eq__(self, other):
         return self.name == other.name

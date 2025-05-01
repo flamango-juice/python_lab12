@@ -2,7 +2,7 @@ import turtle
 
 
 class Sun:
-    def __init__(self,name: str, radius: float, mass: float, temp: float, x: int, y:int):
+    def __init__(self,name: str, radius: float, mass: float, temp: float, x: int, y:int, icon:str=None):
         self.name = name
         self.radius = radius
         self.mass = mass
@@ -12,9 +12,16 @@ class Sun:
 
         self.t = turtle.Turtle()
         self.t.color("#ffbf00")
-        self.t.shape("circle")
+
         self.t.goto(self.x, self.y)
         self.t.speed(0)
+
+        if icon:
+            self.t.shape(icon)
+            self.t.resizemode("user")
+            self.t.shapesize(0.1,0.1,1)
+        else:
+            self.t.shape("circle")
 
 
     def get_mass(self) -> float:
